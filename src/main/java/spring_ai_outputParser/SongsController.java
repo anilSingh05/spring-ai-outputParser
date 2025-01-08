@@ -23,6 +23,11 @@ public class SongsController {
         this.chatClient = chatClient.build();
     }
 
+    /**
+     *
+     * @param artist
+     * @return
+     */
     @GetMapping("/songs-by-artist")
     public List<String> getSongsByArtistInFormattedOutPut(@RequestParam(value = "artist", defaultValue = "Kumar Shanu") String artist){
 
@@ -41,7 +46,11 @@ public class SongsController {
 
     }
 
-
+    /**
+     *
+     * @param artist
+     * @return
+     */
     @GetMapping("/songs-pk")
     public String getSongsByArtist(@RequestParam(value = "artist", defaultValue = "Kishor Kumar") String artist){
 
